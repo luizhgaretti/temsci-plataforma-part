@@ -1,7 +1,8 @@
-
 import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
+  const companyName = "TEM Soluções contábeis inteligentes";
+
   return (
     <footer className="bg-temsci-black text-white">
       <div className="container mx-auto px-4 py-12">
@@ -10,7 +11,7 @@ export function Footer() {
             <div className="mb-4">
               <img
                 src="/tem-logo.png"
-                alt="TEM.SCI Logo"
+                alt={`${companyName} Logo`}
                 className="h-12 w-auto"
               />
             </div>
@@ -60,10 +61,10 @@ export function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-        
-        <div className="mt-10 border-t border-white/10 pt-6 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} TEM Soluções Contábeis Inteligentes. Todos os direitos reservados.</p>
+          
+          <div className="mt-10 border-t border-white/10 pt-6 text-center text-gray-500">
+            <p>&copy; {new Date().getFullYear()} {companyName}. Todos os direitos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>

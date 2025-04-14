@@ -1,7 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
+  const companyName = "TEM Soluções contábeis inteligentes";
+
   const scrollToDemo = () => {
     const demoSection = document.getElementById('solicitar-demo');
     if (demoSection) {

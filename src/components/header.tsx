@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -8,6 +7,8 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+
+  const companyName = "TEM Soluções contábeis inteligentes";
 
   const navItems = [
     { name: "Sobre", href: "#sobre" },
@@ -49,7 +50,7 @@ export function Header() {
             className="h-8 w-auto md:h-10"
           />
           <div className={`ml-4 font-semibold text-lg ${isScrolled ? "text-temsci-black" : "text-white"}`}>
-            TEM.SCI
+            {companyName}
           </div>
         </div>
 
@@ -92,35 +93,6 @@ export function Header() {
           )}
         </button>
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && isMobile && (
-        <div className="md:hidden bg-white">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  className="text-gray-700 hover:text-temsci-purple py-2"
-                >
-                  {item.name}
-                </a>
-              ))}
-              <Button
-                onClick={() => scrollToSection("#solicitar-demo")}
-                className="bg-temsci-purple hover:bg-temsci-purple/90 text-white w-full"
-              >
-                Solicitar Demo
-              </Button>
-            </nav>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
