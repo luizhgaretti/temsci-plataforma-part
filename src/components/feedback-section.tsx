@@ -10,6 +10,13 @@ import {
   UserRound
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Testimonial {
   id: number;
@@ -22,8 +29,6 @@ interface Testimonial {
 }
 
 export function FeedbackSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const testimonials: Testimonial[] = [
     {
       id: 1,
@@ -48,20 +53,24 @@ export function FeedbackSection() {
       company: "RM Associados",
       content: "A integração com nossos sistemas existentes foi muito mais simples do que esperávamos. O suporte técnico da TEM.SCI é excepcional, sempre disponível para resolver qualquer questão.",
       rating: 4
+    },
+    {
+      id: 4,
+      name: "Juliana Costa",
+      role: "Contadora Tributária",
+      company: "JC Contabilidade",
+      content: "Conseguimos aumentar nossa carteira de clientes em 30% sem precisar contratar mais profissionais, graças à eficiência que a plataforma trouxe para nossos processos de retenções.",
+      rating: 5
+    },
+    {
+      id: 5,
+      name: "Marcos Almeida",
+      role: "Diretor de Operações",
+      company: "Contabilidade Digital SA",
+      content: "A dashboards de visualização são intuitivos e nos ajudam a ter uma visão clara de todos os processos. A plataforma se tornou essencial para nosso escritório.",
+      rating: 4
     }
   ];
-
-  const nextTestimonial = () => {
-    setActiveIndex((prevIndex) => 
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevTestimonial = () => {
-    setActiveIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }).map((_, index) => (
@@ -78,12 +87,12 @@ export function FeedbackSection() {
   };
 
   return (
-    <Section id="feedbacks" className="bg-temsci-purple-light overflow-hidden relative">
+    <Section id="feedbacks" className="bg-temsci-purple-light overflow-hidden relative py-20">
       {/* Elementos decorativos de fundo */}
       <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-temsci-blue/10 animate-morphing"></div>
       <div className="absolute bottom-12 -left-24 w-80 h-80 rounded-full bg-temsci-purple/10 animate-morphing" style={{ animationDelay: "2s" }}></div>
       
-      <div className="text-center mb-12 relative z-10">
+      <div className="text-center mb-14 relative z-10">
         <h2 className="text-3xl font-bold tracking-tight text-temsci-black md:text-4xl">
           O que dizem os contadores
         </h2>
@@ -92,87 +101,59 @@ export function FeedbackSection() {
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto relative">
-        <div className="relative overflow-hidden py-10">
-          <div 
-            className="transition-transform duration-500 ease-in-out flex"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-          >
+      <div className="relative z-10 max-w-6xl mx-auto px-4">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
             {testimonials.map((testimonial) => (
-              <div 
-                key={testimonial.id} 
-                className="w-full flex-shrink-0 px-4"
-              >
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                  <CardContent className="p-8 relative">
-                    <Quote className="absolute top-4 left-4 w-12 h-12 text-temsci-purple/20 rotate-180" />
-                    
-                    <div className="flex items-center mb-6 mt-2">
-                      <div className="flex justify-center items-center bg-temsci-purple/10 rounded-full w-16 h-16 mr-4">
-                        {testimonial.image ? (
-                          <img 
-                            src={testimonial.image} 
-                            alt={testimonial.name} 
-                            className="rounded-full w-14 h-14 object-cover"
-                          />
-                        ) : (
-                          <UserRound className="w-8 h-8 text-temsci-purple" />
-                        )}
+              <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="h-full">
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
+                    <CardContent className="p-6 relative h-full flex flex-col">
+                      <Quote className="absolute top-4 right-4 w-10 h-10 text-temsci-purple/10 rotate-180" />
+                      
+                      <div className="flex items-center mb-4">
+                        <div className="flex justify-center items-center bg-temsci-purple/10 rounded-full w-14 h-14 mr-3">
+                          {testimonial.image ? (
+                            <img 
+                              src={testimonial.image} 
+                              alt={testimonial.name} 
+                              className="rounded-full w-12 h-12 object-cover"
+                            />
+                          ) : (
+                            <UserRound className="w-7 h-7 text-temsci-purple" />
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-base truncate">{testimonial.name}</h4>
+                          <p className="text-gray-600 text-sm truncate">{testimonial.role}</p>
+                          <p className="text-gray-500 text-xs truncate">{testimonial.company}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-lg">{testimonial.name}</h4>
-                        <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                        <p className="text-gray-500 text-xs">{testimonial.company}</p>
-                      </div>
-                      <div className="ml-auto flex">
+                      
+                      <div className="flex mb-4">
                         {renderStars(testimonial.rating)}
                       </div>
-                    </div>
-                    
-                    <blockquote className="relative z-10 text-gray-700 italic mb-4">
-                      "{testimonial.content}"
-                    </blockquote>
-                  </CardContent>
-                </Card>
-              </div>
+                      
+                      <blockquote className="relative z-10 text-gray-700 italic flex-1 text-sm">
+                        "{testimonial.content}"
+                      </blockquote>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
             ))}
+          </CarouselContent>
+          <div className="flex items-center justify-center mt-8 gap-2">
+            <CarouselPrevious className="relative inset-auto h-9 w-9 opacity-70 hover:opacity-100 transition-opacity" />
+            <CarouselNext className="relative inset-auto h-9 w-9 opacity-70 hover:opacity-100 transition-opacity" />
           </div>
-        </div>
-
-        {/* Controles de navegação */}
-        <div className="flex justify-center gap-4 mt-6">
-          <button 
-            onClick={prevTestimonial}
-            className="p-2 rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-temsci-purple/50"
-            aria-label="Depoimento anterior"
-          >
-            <ChevronLeft className="w-6 h-6 text-temsci-purple" />
-          </button>
-          
-          <div className="flex gap-2 items-center">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={cn(
-                  "w-2.5 h-2.5 rounded-full transition-all",
-                  activeIndex === index 
-                    ? "bg-temsci-purple w-8" 
-                    : "bg-gray-300 hover:bg-gray-400"
-                )}
-                aria-label={`Ir para depoimento ${index + 1}`}
-              />
-            ))}
-          </div>
-          
-          <button 
-            onClick={nextTestimonial}
-            className="p-2 rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-temsci-purple/50"
-            aria-label="Próximo depoimento"
-          >
-            <ChevronRight className="w-6 h-6 text-temsci-purple" />
-          </button>
-        </div>
+        </Carousel>
       </div>
     </Section>
   );
