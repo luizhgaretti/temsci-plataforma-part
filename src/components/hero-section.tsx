@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { GeometricShapes } from "@/components/ui/geometric-shapes";
 
 export function HeroSection() {
   const companyName = "TEM Soluções contábeis inteligentes";
@@ -28,23 +29,8 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-temsci-black/90 via-temsci-black/80 to-temsci-purple/20"></div>
       
-      {/* Animated particles/shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-temsci-purple/10 animate-float"
-            style={{
-              width: `${Math.random() * 100 + 20}px`,
-              height: `${Math.random() * 100 + 20}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 8 + 4}s`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          ></div>
-        ))}
-      </div>
+      {/* Enhanced geometric background */}
+      <GeometricShapes className="opacity-30" />
       
       <div className="container relative mx-auto px-4 py-20 md:py-32">
         <div className="grid gap-12 md:grid-cols-2 md:gap-8 items-center">
@@ -53,7 +39,7 @@ export function HeroSection() {
               className={`space-y-4 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
             >
               <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                Soluções Contábeis Inteligentes
+                <span className="text-gradient">Soluções Contábeis</span> Inteligentes
               </h1>
               <p className="text-xl text-gray-300 md:text-2xl">
                 Transformando a gestão tributária com tecnologia de ponta para sua empresa.
@@ -101,12 +87,15 @@ export function HeroSection() {
             <div 
               className={`relative h-72 w-72 md:h-96 md:w-96 flex items-center justify-center transition-all duration-1000 delay-500 transform ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}
             >
-              {/* Animated glow effect */}
+              {/* Enhanced glow effect */}
               <div className="absolute inset-0 rounded-full bg-temsci-purple/20 blur-3xl animate-pulse"></div>
               
               {/* Rotating circles around logo */}
               <div className="absolute inset-0 rounded-full border-4 border-temsci-purple/10 animate-[spin_15s_linear_infinite]"></div>
               <div className="absolute inset-8 rounded-full border-4 border-temsci-blue/10 animate-[spin_10s_linear_infinite_reverse]"></div>
+              
+              {/* Morphing shape behind logo */}
+              <div className="absolute inset-8 bg-gradient-to-r from-temsci-purple/20 to-temsci-blue/20 morphing-shape"></div>
               
               {/* Logo with shine effect */}
               <div className="relative h-48 w-48 md:h-64 md:w-64 shine-effect">
@@ -117,10 +106,15 @@ export function HeroSection() {
                 />
               </div>
               
-              {/* Floating accents */}
+              {/* Enhanced floating accents */}
               <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-temsci-blue animate-float" style={{ animationDelay: "1.2s" }}></div>
               <div className="absolute bottom-8 left-0 h-8 w-8 rounded-full bg-temsci-purple animate-float" style={{ animationDelay: "0.8s" }}></div>
               <div className="absolute top-1/3 left-0 h-4 w-4 rounded-full bg-temsci-blue/80 animate-float" style={{ animationDelay: "1.5s" }}></div>
+              
+              {/* New particle effects */}
+              <div className="absolute bottom-1/4 right-1/4 h-3 w-3 rounded-full bg-white/60 animate-pulse" style={{ animationDelay: "0.3s" }}></div>
+              <div className="absolute top-1/4 right-1/3 h-2 w-2 rounded-full bg-white/60 animate-pulse" style={{ animationDelay: "1.2s" }}></div>
+              <div className="absolute bottom-1/3 left-1/4 h-2 w-2 rounded-full bg-white/60 animate-pulse" style={{ animationDelay: "0.7s" }}></div>
             </div>
           </div>
         </div>
