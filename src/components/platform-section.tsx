@@ -1,4 +1,3 @@
-
 import { Section } from "@/components/ui/section";
 import { BenefitItem } from "@/components/benefit-item";
 import { useEffect, useState } from "react";
@@ -87,11 +86,7 @@ export function PlatformSection() {
             <div className="absolute -inset-1 bg-gradient-to-r from-temsci-purple to-temsci-blue rounded-lg blur-lg opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             
             <div className="relative z-10">
-              <img 
-                src="/tem-logo.png" 
-                alt="TEM Soluções" 
-                className="mx-auto h-24 mb-6"
-              />
+              
               
               <h3 className="text-xl font-bold text-center text-temsci-black mb-4">
                 Transforme a gestão tributária da sua empresa
