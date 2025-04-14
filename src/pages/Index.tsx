@@ -8,8 +8,36 @@ import { BenefitsSection } from "@/components/benefits-section";
 import { DemoSection } from "@/components/demo-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
+import { useEffect } from "react";
 
 const Index = () => {
+  // Add animation classes to elements as they come into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      section.classList.add("opacity-0");
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
