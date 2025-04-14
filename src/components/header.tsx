@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -86,7 +87,7 @@ export function Header() {
               transition-opacity duration-500 ease-in-out">
             </span>
             <span className="relative z-10 flex items-center gap-2">
-              Solicitar Demo
+              Solicitar Demonstração
               <div className="relative">
                 <span className="absolute -inset-1 bg-temsci-blue rounded-full animate-ping opacity-20"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-temsci-blue"></span>
@@ -131,7 +132,7 @@ export function Header() {
                 shadow-md hover:shadow-lg
                 transform hover:scale-[1.01]"
               >
-                Solicitar Demo
+                Solicitar Demonstração
               </Button>
             </nav>
           </div>
