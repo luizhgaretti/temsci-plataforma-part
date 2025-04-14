@@ -48,7 +48,7 @@ export function DemoForm() {
           value={formData.name} 
           onChange={handleChange} 
           required 
-          className="border-temsci-purple/20 focus:border-temsci-purple"
+          className="border-black focus:border-black text-black"
         />
       </div>
       <div>
@@ -59,7 +59,7 @@ export function DemoForm() {
           value={formData.email} 
           onChange={handleChange} 
           required 
-          className="border-temsci-purple/20 focus:border-temsci-purple"
+          className="border-black focus:border-black text-black"
         />
       </div>
       <div>
@@ -69,7 +69,7 @@ export function DemoForm() {
           value={formData.company} 
           onChange={handleChange} 
           required 
-          className="border-temsci-purple/20 focus:border-temsci-purple"
+          className="border-black focus:border-black text-black"
         />
       </div>
       <div>
@@ -79,7 +79,7 @@ export function DemoForm() {
           value={formData.phone} 
           onChange={handleChange} 
           required 
-          className="border-temsci-purple/20 focus:border-temsci-purple"
+          className="border-black focus:border-black text-black"
         />
       </div>
       <Button type="submit" className="w-full bg-temsci-purple hover:bg-temsci-purple/90 text-white">
