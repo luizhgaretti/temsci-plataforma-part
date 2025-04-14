@@ -149,7 +149,6 @@ export function TimeEfficiencySection() {
                       fill="#0EA5E9" 
                       radius={[4, 4, 0, 0]} 
                       animationDuration={1500}
-                      animationDelay={300}
                     />
                   </BarChart>
                 </ResponsiveContainer>
@@ -327,3 +326,4 @@ export function TimeEfficiencySection() {
     </Section>
   );
 }
+
