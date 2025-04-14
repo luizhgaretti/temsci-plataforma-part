@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -44,9 +45,9 @@ export function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="/tem-logo.png"
+            src="/lovable-uploads/19e3399a-2176-4ffd-858a-c20e4fbad77d.png"
             alt="TEM.SCI Logo"
-            className="h-8 w-auto md:h-10"
+            className="h-12 w-auto md:h-16"
           />
           <div className={`ml-4 font-semibold text-lg ${isScrolled ? "text-temsci-black" : "text-white"}`}>
             {companyName}

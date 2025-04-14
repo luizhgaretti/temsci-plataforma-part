@@ -98,9 +98,9 @@ export function HeroSection() {
               <div className="absolute inset-8 bg-gradient-to-r from-temsci-purple/20 to-temsci-blue/20 morphing-shape"></div>
               
               {/* Logo with shine effect */}
-              <div className="relative h-48 w-48 md:h-64 md:w-64 shine-effect">
+              <div className="relative h-64 w-64 md:h-80 md:w-80 shine-effect">
                 <img
-                  src="/tem-logo.png"
+                  src="/lovable-uploads/19e3399a-2176-4ffd-858a-c20e4fbad77d.png"
                   alt="TEM Soluções contábeis inteligentes Logo"
                   className="h-full w-full object-contain"
                 />
