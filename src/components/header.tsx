@@ -44,7 +44,7 @@ export function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="/lovable-uploads/19e3399a-2176-4ffd-858a-c20e4fbad77d.png"
+            src="/lovable-uploads/dc643f90-d32b-46d9-bb57-89217bd99123.png"
             alt="TEM.SCI Logo"
             className="h-12 w-auto md:h-16"
           />

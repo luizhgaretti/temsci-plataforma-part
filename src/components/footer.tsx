@@ -1,4 +1,3 @@
-
 import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
@@ -11,7 +10,7 @@ export function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src="/lovable-uploads/19e3399a-2176-4ffd-858a-c20e4fbad77d.png"
+                src="/lovable-uploads/dc643f90-d32b-46d9-bb57-89217bd99123.png"
                 alt={`${companyName} Logo`}
                 className="h-16 w-auto"
               />
