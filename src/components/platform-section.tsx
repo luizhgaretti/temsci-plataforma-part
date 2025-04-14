@@ -1,7 +1,5 @@
-
 import { Section } from "@/components/ui/section";
 import { BenefitItem } from "@/components/benefit-item";
-
 export function PlatformSection() {
   const benefits = ["Minimização dos riscos fiscais", "Redução dos custos com mão de obra", "Agilidade na análise dos documentos", "Segurança na aplicação das regras legais", "Transparência nos processos de análise", "Minimização de erros de análise", "Armazenamento eletrônico de processos para comprovação fiscal", "Aumento na arrecadação dos órgãos públicos", "Facilidade de acesso (plataforma web e mobile)", "Software modular, garantindo a otimização de custos"];
   return <Section className="bg-white">
@@ -12,8 +10,7 @@ export function PlatformSection() {
               <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3" alt="Plataforma PART em uso" className="w-full h-auto object-cover mix-blend-overlay opacity-60" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <h3 className="text-2xl font-bold text-white text-center px-4">
-                  TEM Soluções contábeis inteligentes
-                </h3>
+              </h3>
               </div>
             </div>
           </div>
@@ -51,4 +48,3 @@ export function PlatformSection() {
       </div>
     </Section>;
 }
-
