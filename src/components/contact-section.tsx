@@ -1,4 +1,3 @@
-
 import { Section } from "@/components/ui/section";
 import { ContactInfo } from "@/components/contact-info";
 import { Button } from "@/components/ui/button";
@@ -56,7 +55,7 @@ export function ContactSection() {
           <h3 className="text-xl font-semibold mb-6 text-temsci-black">Informações de Contato</h3>
           
           <ContactInfo
-            address="Av. Presidente Vargas, 1000, Centro, Rio de Janeiro - RJ, 20071-000"
+            address="Rua Professor João Machado, 705, Freguêsia do Ó, São Paulo - SP, 02927-00"
             phone="(21) 9999-9999"
             email="contato@temsci.com.br"
           />

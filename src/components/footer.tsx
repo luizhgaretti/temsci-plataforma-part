@@ -1,4 +1,3 @@
-
 import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
@@ -55,9 +54,9 @@ export function Footer() {
                 <span className="text-gray-400">(21) 9999-9999</span>
               </li>
               <li className="text-gray-400">
-                <p>Av. Presidente Vargas, 1000</p>
-                <p>Centro, Rio de Janeiro - RJ</p>
-                <p>CEP: 20071-000</p>
+                <p>Rua Professor João Machado, 705</p>
+                <p>Freguêsia do Ó, São Paulo - SP</p>
+                <p>CEP: 02927-00</p>
               </li>
             </ul>
           </div>

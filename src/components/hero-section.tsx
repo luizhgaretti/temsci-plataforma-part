@@ -38,7 +38,7 @@ export function HeroSection() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white/10"
+                className="border-white text-black hover:bg-white/10"
                 onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Saiba Mais
