@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -76,39 +75,36 @@ export function Header() {
             onClick={() => scrollToSection("#solicitar-demo")}
             className="bg-temsci-purple hover:bg-temsci-purple/90 text-white 
             relative overflow-hidden group
-            animate-pulse 
-            hover:animate-none
-            transition-all duration-300
-            shadow-lg hover:shadow-xl 
-            border-2 border-transparent hover:border-temsci-blue/50
-            transform hover:scale-105"
-        >
-          <span className="absolute inset-0 bg-gradient-to-r from-temsci-purple via-temsci-blue to-temsci-purple 
-            bg-[length:200%_200%] 
-            group-hover:animate-gradient-shift 
-            opacity-0 group-hover:opacity-30 
-            transition-opacity duration-300">
-          </span>
-          <span className="relative z-10 flex items-center gap-2">
-            Solicitar Demo
-            <div className="relative">
-              <span className="absolute -inset-1 bg-temsci-blue rounded-full animate-ping opacity-30"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-temsci-blue"></span>
-            </div>
-          </span>
-        </Button>
-      </nav>
+            transition-all duration-300 ease-in-out
+            shadow-md hover:shadow-lg
+            transform hover:scale-[1.02]
+            border border-transparent hover:border-temsci-purple/30"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-temsci-purple via-temsci-blue to-temsci-purple 
+              bg-[length:200%_200%] 
+              opacity-0 group-hover:opacity-20 
+              transition-opacity duration-500 ease-in-out">
+            </span>
+            <span className="relative z-10 flex items-center gap-2">
+              Solicitar Demo
+              <div className="relative">
+                <span className="absolute -inset-1 bg-temsci-blue rounded-full animate-ping opacity-20"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-temsci-blue"></span>
+              </div>
+            </span>
+          </Button>
+        </nav>
 
-      <button
-        className="md:hidden"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-      >
-        {mobileMenuOpen ? (
-          <X className={isScrolled ? "text-temsci-black" : "text-white"} />
-        ) : (
-          <Menu className={isScrolled ? "text-temsci-black" : "text-white"} />
-        )}
-      </button>
+        <button
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? (
+            <X className={isScrolled ? "text-temsci-black" : "text-white"} />
+          ) : (
+            <Menu className={isScrolled ? "text-temsci-black" : "text-white"} />
+          )}
+        </button>
       </div>
 
       {mobileMenuOpen && isMobile && (
@@ -130,7 +126,10 @@ export function Header() {
               ))}
               <Button
                 onClick={() => scrollToSection("#solicitar-demo")}
-                className="bg-temsci-purple hover:bg-temsci-purple/90 text-white w-full"
+                className="bg-temsci-purple hover:bg-temsci-purple/90 text-white w-full
+                transition-all duration-300 ease-in-out
+                shadow-md hover:shadow-lg
+                transform hover:scale-[1.01]"
               >
                 Solicitar Demo
               </Button>
