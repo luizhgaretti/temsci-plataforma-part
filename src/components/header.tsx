@@ -14,7 +14,6 @@ export function Header() {
   const navItems = [
     { name: "Sobre", href: "#sobre" },
     { name: "Serviços", href: "#servicos" },
-    { name: "Solicitar Demo", href: "#solicitar-demo" },
     { name: "Contato", href: "#contato" },
   ];
 
