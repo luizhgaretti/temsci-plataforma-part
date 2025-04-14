@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -54,7 +53,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <a
@@ -75,26 +73,43 @@ export function Header() {
           ))}
           <Button
             onClick={() => scrollToSection("#solicitar-demo")}
-            className="bg-temsci-purple hover:bg-temsci-purple/90 text-white"
-          >
-            Solicitar Demo
-          </Button>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="bg-temsci-purple hover:bg-temsci-purple/90 text-white 
+            relative overflow-hidden group
+            animate-pulse 
+            hover:animate-none
+            transition-all duration-300
+            shadow-lg hover:shadow-xl 
+            border-2 border-transparent hover:border-temsci-blue/50
+            transform hover:scale-105"
         >
-          {mobileMenuOpen ? (
-            <X className={isScrolled ? "text-temsci-black" : "text-white"} />
-          ) : (
-            <Menu className={isScrolled ? "text-temsci-black" : "text-white"} />
-          )}
-        </button>
+          <span className="absolute inset-0 bg-gradient-to-r from-temsci-purple via-temsci-blue to-temsci-purple 
+            bg-[length:200%_200%] 
+            group-hover:animate-gradient-shift 
+            opacity-0 group-hover:opacity-30 
+            transition-opacity duration-300">
+          </span>
+          <span className="relative z-10 flex items-center gap-2">
+            Solicitar Demo
+            <div className="relative">
+              <span className="absolute -inset-1 bg-temsci-blue rounded-full animate-ping opacity-30"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-temsci-blue"></span>
+            </div>
+          </span>
+        </Button>
+      </nav>
+
+      <button
+        className="md:hidden"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? (
+          <X className={isScrolled ? "text-temsci-black" : "text-white"} />
+        ) : (
+          <Menu className={isScrolled ? "text-temsci-black" : "text-white"} />
+        )}
+      </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && isMobile && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm shadow-md">
           <div className="container mx-auto px-4 py-4">
