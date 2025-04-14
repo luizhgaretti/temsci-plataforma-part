@@ -38,7 +38,7 @@ export function PlatformSection() {
         
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-temsci-black mb-6">
-            Nossa primeira solução foi a Plataforma PART
+            Plataforma de Retenção Contábil
           </h2>
           <p className="text-gray-700 mb-6">
             Desenvolvida para automatizar e facilitar a aplicação das regras atribuídas aos tomadores de serviços,
@@ -69,3 +69,4 @@ export function PlatformSection() {
     </Section>
   );
 }
+
