@@ -89,8 +89,11 @@ export function PlatformSection() {
               <BenefitItem 
                 key={index} 
                 text={text} 
-                className={`hover:scale-105 transition-transform duration-300 opacity-0 animate-fade-in`}
-                style={{ animationDelay: `${index * 0.15}s`, animationFillMode: 'forwards' }}
+                className="hover:scale-105 transition-transform duration-300 opacity-0 animate-fade-in"
+                style={{ 
+                  animationDelay: `${index * 0.15}s`, 
+                  animationFillMode: 'forwards' 
+                }}
               />
             ))}
           </div>
