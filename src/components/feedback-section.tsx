@@ -79,7 +79,7 @@ export function FeedbackSection() {
         className={cn(
           "w-5 h-5", 
           index < rating 
-            ? "text-yellow-400 fill-yellow-400" 
+            ? "text-magenta-500 fill-magenta-500" 
             : "text-gray-300"
         )} 
       />
@@ -87,16 +87,15 @@ export function FeedbackSection() {
   };
 
   return (
-    <Section id="feedbacks" className="bg-temsci-purple-light overflow-hidden relative py-20">
-      {/* Elementos decorativos de fundo */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-temsci-blue/10 animate-morphing"></div>
-      <div className="absolute bottom-12 -left-24 w-80 h-80 rounded-full bg-temsci-purple/10 animate-morphing" style={{ animationDelay: "2s" }}></div>
+    <Section id="feedbacks" className="bg-gradient-to-br from-purple-600 to-purple-800 overflow-hidden relative py-20">
+      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-magenta-500/20 animate-morphing"></div>
+      <div className="absolute bottom-12 -left-24 w-80 h-80 rounded-full bg-orange-500/20 animate-morphing" style={{ animationDelay: "2s" }}></div>
       
       <div className="text-center mb-14 relative z-10">
-        <h2 className="text-3xl font-bold tracking-tight text-temsci-black md:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
           O que dizem os contadores
         </h2>
-        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
           Veja como nossa plataforma está transformando o trabalho dos profissionais contábeis
         </p>
       </div>
@@ -113,12 +112,12 @@ export function FeedbackSection() {
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="h-full">
-                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
+                  <Card className="border-0 shadow-2xl hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full bg-white/10 backdrop-blur-lg">
                     <CardContent className="p-6 relative h-full flex flex-col">
-                      <Quote className="absolute top-4 right-4 w-10 h-10 text-temsci-purple/10 rotate-180" />
+                      <Quote className="absolute top-4 right-4 w-10 h-10 text-magenta-500/20 rotate-180" />
                       
                       <div className="flex items-center mb-4">
-                        <div className="flex justify-center items-center bg-temsci-purple/10 rounded-full w-14 h-14 mr-3">
+                        <div className="flex justify-center items-center bg-magenta-500/20 rounded-full w-14 h-14 mr-3">
                           {testimonial.image ? (
                             <img 
                               src={testimonial.image} 
@@ -126,13 +125,13 @@ export function FeedbackSection() {
                               className="rounded-full w-12 h-12 object-cover"
                             />
                           ) : (
-                            <UserRound className="w-7 h-7 text-temsci-purple" />
+                            <UserRound className="w-7 h-7 text-magenta-500" />
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-base truncate">{testimonial.name}</h4>
-                          <p className="text-gray-600 text-sm truncate">{testimonial.role}</p>
-                          <p className="text-gray-500 text-xs truncate">{testimonial.company}</p>
+                          <h4 className="font-semibold text-base truncate text-white">{testimonial.name}</h4>
+                          <p className="text-white/80 text-sm truncate">{testimonial.role}</p>
+                          <p className="text-white/60 text-xs truncate">{testimonial.company}</p>
                         </div>
                       </div>
                       
@@ -140,7 +139,7 @@ export function FeedbackSection() {
                         {renderStars(testimonial.rating)}
                       </div>
                       
-                      <blockquote className="relative z-10 text-gray-700 italic flex-1 text-sm">
+                      <blockquote className="relative z-10 text-white/90 italic flex-1 text-sm">
                         "{testimonial.content}"
                       </blockquote>
                     </CardContent>
@@ -150,11 +149,12 @@ export function FeedbackSection() {
             ))}
           </CarouselContent>
           <div className="flex items-center justify-center mt-8 gap-2">
-            <CarouselPrevious className="relative inset-auto h-9 w-9 opacity-70 hover:opacity-100 transition-opacity" />
-            <CarouselNext className="relative inset-auto h-9 w-9 opacity-70 hover:opacity-100 transition-opacity" />
+            <CarouselPrevious className="relative inset-auto h-9 w-9 text-white opacity-70 hover:opacity-100 transition-opacity" />
+            <CarouselNext className="relative inset-auto h-9 w-9 text-white opacity-70 hover:opacity-100 transition-opacity" />
           </div>
         </Carousel>
       </div>
     </Section>
   );
 }
+
