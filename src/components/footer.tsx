@@ -1,3 +1,4 @@
+
 import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
@@ -16,55 +17,54 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-400 max-w-xs">
-              Soluções tecnológicas de naturezas contábil, fiscal, tributária, financeira e administrativa.
+              Soluções tecnológicas de naturezas contábil, fiscal, tributária, financeira e administrativa para empresas e órgãos públicos.
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
+            <h3 className="text-xl font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#sobre" className="text-gray-400 hover:text-white transition-colors">
-                  Sobre Nós
-                </a>
+                <a href="#sobre" className="text-gray-400 hover:text-white transition-colors">Sobre Nós</a>
               </li>
               <li>
-                <a href="#servicos" className="text-gray-400 hover:text-white transition-colors">
-                  Nossos Serviços
-                </a>
+                <a href="#servicos" className="text-gray-400 hover:text-white transition-colors">Nossos Serviços</a>
               </li>
               <li>
-                <a href="#solicitar-demo" className="text-gray-400 hover:text-white transition-colors">
-                  Solicitar Demo
-                </a>
+                <a href="#solicitar-demo" className="text-gray-400 hover:text-white transition-colors">Solicitar Demo</a>
               </li>
               <li>
-                <a href="#contato" className="text-gray-400 hover:text-white transition-colors">
-                  Contato
-                </a>
+                <a href="#contato" className="text-gray-400 hover:text-white transition-colors">Contato</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contato</h3>
+            <h3 className="text-xl font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-temsci-purple" />
+              <li className="flex items-start gap-3">
+                <div className="mt-1 text-temsci-purple">
+                  <Mail size={18} />
+                </div>
+                <span className="text-gray-400">contato@temsci.com.br</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="mt-1 text-temsci-purple">
+                  <Phone size={18} />
+                </div>
                 <span className="text-gray-400">(21) 9999-9999</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-5 w-5 text-temsci-purple" />
-                <a href="mailto:contato@temsci.com.br" className="text-gray-400 hover:text-white transition-colors">
-                  contato@temsci.com.br
-                </a>
+              <li className="text-gray-400">
+                <p>Av. Presidente Vargas, 1000</p>
+                <p>Centro, Rio de Janeiro - RJ</p>
+                <p>CEP: 20071-000</p>
               </li>
             </ul>
           </div>
-          
-          <div className="mt-10 border-t border-white/10 pt-6 text-center text-gray-500">
-            <p>&copy; {new Date().getFullYear()} {companyName}. Todos os direitos reservados.</p>
-          </div>
+        </div>
+        
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-gray-500">
+          <p>&copy; {new Date().getFullYear()} {companyName}. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

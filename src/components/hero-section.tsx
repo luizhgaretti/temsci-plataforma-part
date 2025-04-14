@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -50,7 +51,7 @@ export function HeroSection() {
               <div className="absolute inset-0 rounded-full bg-temsci-purple/20 blur-3xl"></div>
               <img
                 src="/tem-logo.png"
-                alt="TEM.SCI Logo"
+                alt="TEM Soluções contábeis inteligentes Logo"
                 className="relative h-48 w-48 md:h-64 md:w-64 object-contain"
               />
             </div>

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -93,6 +94,35 @@ export function Header() {
           )}
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && isMobile && (
+        <div className="md:hidden bg-white/95 backdrop-blur-sm shadow-md">
+          <div className="container mx-auto px-4 py-4">
+            <nav className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className="text-gray-700 hover:text-temsci-purple py-2"
+                >
+                  {item.name}
+                </a>
+              ))}
+              <Button
+                onClick={() => scrollToSection("#solicitar-demo")}
+                className="bg-temsci-purple hover:bg-temsci-purple/90 text-white w-full"
+              >
+                Solicitar Demo
+              </Button>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
