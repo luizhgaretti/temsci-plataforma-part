@@ -79,7 +79,7 @@ export function FeedbackSection() {
         className={cn(
           "w-5 h-5", 
           index < rating 
-            ? "text-magenta-500 fill-magenta-500" 
+            ? "text-amber-400 fill-amber-400" 
             : "text-gray-300"
         )} 
       />
@@ -87,9 +87,9 @@ export function FeedbackSection() {
   };
 
   return (
-    <Section id="feedbacks" className="bg-gradient-to-br from-purple-600 to-purple-800 overflow-hidden relative py-20">
-      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-magenta-500/20 animate-morphing"></div>
-      <div className="absolute bottom-12 -left-24 w-80 h-80 rounded-full bg-orange-500/20 animate-morphing" style={{ animationDelay: "2s" }}></div>
+    <Section id="feedbacks" className="bg-gradient-to-br from-indigo-700 to-indigo-900 overflow-hidden relative py-20">
+      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-temsci-blue/20 animate-morphing"></div>
+      <div className="absolute bottom-12 -left-24 w-80 h-80 rounded-full bg-amber-500/20 animate-morphing" style={{ animationDelay: "2s" }}></div>
       
       <div className="text-center mb-14 relative z-10">
         <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
@@ -112,12 +112,12 @@ export function FeedbackSection() {
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="h-full">
-                  <Card className="border-0 shadow-2xl hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full bg-white/10 backdrop-blur-lg">
+                  <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden h-full bg-white/5 backdrop-blur-sm">
                     <CardContent className="p-6 relative h-full flex flex-col">
-                      <Quote className="absolute top-4 right-4 w-10 h-10 text-magenta-500/20 rotate-180" />
+                      <Quote className="absolute top-4 right-4 w-10 h-10 text-amber-400/20 rotate-180" />
                       
                       <div className="flex items-center mb-4">
-                        <div className="flex justify-center items-center bg-magenta-500/20 rounded-full w-14 h-14 mr-3">
+                        <div className="flex justify-center items-center bg-temsci-blue/20 rounded-full w-14 h-14 mr-3">
                           {testimonial.image ? (
                             <img 
                               src={testimonial.image} 
@@ -125,7 +125,7 @@ export function FeedbackSection() {
                               className="rounded-full w-12 h-12 object-cover"
                             />
                           ) : (
-                            <UserRound className="w-7 h-7 text-magenta-500" />
+                            <UserRound className="w-7 h-7 text-temsci-blue" />
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -149,12 +149,11 @@ export function FeedbackSection() {
             ))}
           </CarouselContent>
           <div className="flex items-center justify-center mt-8 gap-2">
-            <CarouselPrevious className="relative inset-auto h-9 w-9 text-white opacity-70 hover:opacity-100 transition-opacity" />
-            <CarouselNext className="relative inset-auto h-9 w-9 text-white opacity-70 hover:opacity-100 transition-opacity" />
+            <CarouselPrevious className="relative inset-auto h-9 w-9 text-white bg-indigo-800/50 border-indigo-400/30 hover:bg-indigo-700 opacity-90 hover:opacity-100 transition-opacity" />
+            <CarouselNext className="relative inset-auto h-9 w-9 text-white bg-indigo-800/50 border-indigo-400/30 hover:bg-indigo-700 opacity-90 hover:opacity-100 transition-opacity" />
           </div>
         </Carousel>
       </div>
     </Section>
   );
 }
-
