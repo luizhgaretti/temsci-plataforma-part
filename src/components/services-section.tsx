@@ -18,7 +18,7 @@ export function ServicesSection() {
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <FeatureCard
           title="Plataforma PART"
-          description="Análise automatizada das Retenções Tributárias para empresas e órgãos públicos."
+          description="Análise automatizada das Retenções Tributárias para órgãos e entidades públicas"
           icon={Calculator}
         />
         <FeatureCard
