@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogIn } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export function Header() {
@@ -94,6 +94,21 @@ export function Header() {
               </div>
             </span>
           </Button>
+          
+          <Button
+            asChild
+            variant="outline"
+            className={`flex items-center gap-2 ${
+              isScrolled 
+                ? "border-temsci-purple text-temsci-purple hover:bg-temsci-purple/10" 
+                : "border-white text-white hover:bg-white/10"
+            }`}
+          >
+            <a href="https://temcontabil-tawny.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <LogIn className="w-4 h-4" />
+              Área de Membro
+            </a>
+          </Button>
         </nav>
 
         <button
@@ -133,6 +148,17 @@ export function Header() {
                 transform hover:scale-[1.01]"
               >
                 Solicitar Demonstração
+              </Button>
+              
+              <Button
+                asChild
+                variant="outline"
+                className="w-full border-temsci-purple text-temsci-purple hover:bg-temsci-purple/10"
+              >
+                <a href="https://temcontabil-tawny.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <LogIn className="w-4 h-4" />
+                  Área de Membro
+                </a>
               </Button>
             </nav>
           </div>
