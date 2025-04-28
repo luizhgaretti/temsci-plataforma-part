@@ -27,7 +27,7 @@ export function ServicesSection() {
           icon={Building2}
         />
         <FeatureCard
-          title="Apoio Contábil Governamental*"
+          title="Apoio Contábil Governamental"
           description="Assessoria técnica para departamentos fiscais e contábeis da administração pública"
           icon={FileText}
         />
