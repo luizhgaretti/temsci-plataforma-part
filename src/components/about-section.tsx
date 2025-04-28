@@ -1,3 +1,4 @@
+
 import { Section } from "@/components/ui/section";
 import { useEffect, useState } from "react";
 import { GeometricShapes } from "@/components/ui/geometric-shapes";
@@ -72,7 +73,7 @@ export function AboutSection() {
             {[
               { title: "Inovação", description: "Plataforma única que automatiza e valida informações fiscais e retenções tributárias com precisão." },
               { title: "Segurança", description: "Validamos automaticamente todas as informações fiscais, garantindo conformidade tributária com segurança e confiabilidade." },
-              { title: "Economia", description: "Redução de custos operacionais com otimização de processos contábeis e fiscais." }
+              { title: "Economia", description: "Redução de custos, tempo e riscos fiscais com processos inteligentes de retenção tributária" }
             ].map((item, index) => (
               <div 
                 key={index} 
