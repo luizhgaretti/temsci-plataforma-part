@@ -70,11 +70,6 @@ export function PlatformSection() {
               documentos fiscais os tributos a serem retidos pelos tomadores, facilidade também oferecida
               pela Plataforma Web de Análise das Retenções Tributárias – PART.
             </p>
-            
-            <p className="text-gray-700">
-              Escritórios de contabilidade, organizações indispensáveis no apoio às empresas, fazem parte na
-              nossa carteira de clientes, assim como órgãos públicos, potenciais tomadores de serviços.
-            </p>
           </div>
         </div>
         
