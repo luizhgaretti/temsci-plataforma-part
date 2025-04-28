@@ -49,7 +49,6 @@ export function PlatformSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {[
               "Imposto de Renda – IR",
-              "Contribuição Social s/ Lucro Líquido – CSLL",
               "Contribuição para o Financiamento da Seguridade Social – COFINS",
               "Contribuição Previdenciária – INSS",
               "Imposto s/ Serviços de Qualquer Natureza – ISSQN"
