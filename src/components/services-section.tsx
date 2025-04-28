@@ -33,7 +33,7 @@ export function ServicesSection() {
         />
         <FeatureCard
           title="Gestão Tributária"
-          description="Controle eficiente dos impostos retidos e recolhidos por sua empresa."
+          description="Gestão eficaz dos impostos retidos e recolhidos pela administração pública"
           icon={BarChart3}
         />
       </div>
