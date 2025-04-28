@@ -93,9 +93,9 @@ export function PlatformSection() {
                 </div>
                 
                 <div className="p-4 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-md transition-all">
-                  <h4 className="font-medium text-temsci-blue">Economia de tempo</h4>
+                  <h4 className="font-medium text-temsci-blue">Economia de Tempo</h4>
                   <p className="text-gray-600">
-                    Reduza drasticamente o tempo gasto em tarefas manuais e foque no que realmente importa para sua empresa.
+                    Reduza o tempo com processos manuais e concentre-se no que é essencial para sua instituição pública.
                   </p>
                 </div>
                 
