@@ -1,3 +1,4 @@
+
 import { Section } from "@/components/ui/section";
 import { BenefitItem } from "@/components/benefit-item";
 import { useEffect, useState } from "react";
@@ -49,7 +50,6 @@ export function PlatformSection() {
             {[
               "Imposto de Renda – IR",
               "Contribuição Social s/ Lucro Líquido – CSLL",
-              "Programa de Integração Social – PIS",
               "Contribuição para o Financiamento da Seguridade Social – COFINS",
               "Contribuição Previdenciária – INSS",
               "Imposto s/ Serviços de Qualquer Natureza – ISSQN"
