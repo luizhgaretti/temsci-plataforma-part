@@ -54,20 +54,6 @@ export function AboutSection() {
             voltadas à modernização e à eficiência da gestão contábil, fiscal, tributária, financeira e administrativa de órgãos públicos, como prefeituras, câmaras municipais, autarquias e demais entidades da administração pública. Todas as soluções são desenvolvidas em conformidade com a legislação vigente, atendendo às exigências da Receita Federal, do INSS e dos demais órgãos de controle.
           </p>
           
-          <div className="relative p-6 bg-white rounded-lg shadow-md mt-8 border-l-4 border-temsci-blue glass-effect">
-            <div className="absolute -inset-1 bg-gradient-to-r from-temsci-blue/20 to-temsci-purple/20 rounded-lg blur-sm opacity-50 animate-pulse"></div>
-            <div className="relative">
-              <p className="leading-relaxed">
-                A escassez de mão de obra qualificada e os elevados custos para atender tamanha burocracia
-                exigida dos empresários e gestores públicos, despertou em nós o desejo de disponibilizar ao
-                mercado 
-                <span className="text-temsci-blue font-semibold"> ferramentas com preços acessíveis </span>
-                que propiciam agilidade, segurança, rentabilidade, transparência e gestão dos recursos.
-              </p>
-            </div>
-            <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-temsci-purple/10 rounded-full blur-xl"></div>
-          </div>
-          
           {/* New animated section */}
           <div className={`mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {[
