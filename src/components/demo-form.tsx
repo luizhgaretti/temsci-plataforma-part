@@ -9,7 +9,7 @@ export function DemoForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
+    entidade: "",
     phone: "",
   });
 
@@ -34,7 +34,7 @@ export function DemoForm() {
     setFormData({
       name: "",
       email: "",
-      company: "",
+      entidade: "",
       phone: "",
     });
   };
@@ -64,9 +64,9 @@ export function DemoForm() {
       </div>
       <div>
         <Input 
-          placeholder="Empresa" 
-          name="company" 
-          value={formData.company} 
+          placeholder="Entidade" 
+          name="entidade" 
+          value={formData.entidade} 
           onChange={handleChange} 
           required 
           className="border-black focus:border-black text-black"

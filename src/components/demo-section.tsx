@@ -11,8 +11,9 @@ export function DemoSection() {
             Solicite uma Demonstração
           </h2>
           <p className="text-gray-300 mb-6">
-            Descubra como nossas soluções podem transformar a gestão tributária e contábil da sua empresa.
-            Preencha o formulário e nossa equipe entrará em contato para agendar uma demonstração personalizada.
+            Conheça nossas soluções especializadas para transformar a administração tributária e contábil na sua instituição. 
+            Preencha o formulário abaixo e nossa equipe técnica entrará em contato para agendar uma apresentação personalizada, 
+            focada nas necessidades da gestão pública.
           </p>
           <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10">
             <DemoForm />
@@ -35,14 +36,10 @@ export function DemoSection() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">3</span>
-                  <span>Integração com seus sistemas existentes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">4</span>
                   <span>Relatórios e dashboards personalizados</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">5</span>
+                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">4</span>
                   <span>Exemplo prático com seus próprios dados</span>
                 </li>
               </ul>
