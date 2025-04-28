@@ -100,8 +100,8 @@ export function Header() {
             variant="outline"
             className={`flex items-center gap-2 ${
               isScrolled 
-                ? "border-temsci-purple text-temsci-purple hover:bg-temsci-purple/10" 
-                : "border-white text-white hover:bg-white/10"
+                ? "border-temsci-purple text-temsci-black hover:bg-temsci-purple/10" 
+                : "border-white text-temsci-black hover:bg-white/10"
             }`}
           >
             <a href="https://temcontabil-tawny.vercel.app/" target="_blank" rel="noopener noreferrer">
@@ -153,7 +153,7 @@ export function Header() {
               <Button
                 asChild
                 variant="outline"
-                className="w-full border-temsci-purple text-temsci-purple hover:bg-temsci-purple/10"
+                className="w-full border-temsci-purple text-temsci-black hover:bg-temsci-purple/10"
               >
                 <a href="https://temcontabil-tawny.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   <LogIn className="w-4 h-4" />
