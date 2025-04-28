@@ -71,7 +71,7 @@ export function AboutSection() {
           {/* New animated section */}
           <div className={`mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {[
-              { title: "Inovação", description: "Ferramentas tecnológicas de ponta para transformar desafios fiscais em oportunidades." },
+              { title: "Inovação", description: "Plataforma única que automatiza e valida informações fiscais e retenções tributárias com precisão." },
               { title: "Segurança", description: "Processos seguros e confiáveis para garantir a conformidade com a legislação tributária." },
               { title: "Economia", description: "Redução de custos operacionais com otimização de processos contábeis e fiscais." }
             ].map((item, index) => (
