@@ -75,8 +75,7 @@ export function PlatformSection() {
         
         <div className={`order-1 md:order-2 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[50px] opacity-0'}`}>
           <div className="relative rounded-lg overflow-hidden shadow-xl bg-white p-6 z-10">
-            {/* Glowing background effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-temsci-purple to-temsci-blue rounded-lg blur-lg opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            {/* Removed glowing background effect that was causing flashing */}
             
             <div className="relative z-10">
               
