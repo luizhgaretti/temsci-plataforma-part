@@ -49,10 +49,9 @@ export function AboutSection() {
         
         <div className={`mt-12 space-y-6 text-lg text-gray-700 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="leading-relaxed">
-            A TEM Soluções contábeis inteligentes nasceu para criar e oferecer às empresas e órgãos públicos 
+            A TEM Soluções Contábeis Inteligentes é uma empresa especializada no desenvolvimento e fornecimento de 
             <span className="text-temsci-purple font-semibold"> soluções tecnológicas </span>
-            de naturezas contábil, fiscal, tributária, financeira e administrativa que suprem as necessidades
-            diárias no cumprimento das complexas leis vigentes no país.
+            voltadas à modernização e à eficiência da gestão contábil, fiscal, tributária, financeira e administrativa de órgãos públicos, como prefeituras, câmaras municipais, autarquias e demais entidades da administração pública. Todas as soluções são desenvolvidas em conformidade com a legislação vigente, atendendo às exigências da Receita Federal, do INSS e dos demais órgãos de controle.
           </p>
           
           <div className="relative p-6 bg-white rounded-lg shadow-md mt-8 border-l-4 border-temsci-blue glass-effect">
