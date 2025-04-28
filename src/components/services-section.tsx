@@ -22,8 +22,8 @@ export function ServicesSection() {
           icon={Calculator}
         />
         <FeatureCard
-          title="Soluções para Empresas"
-          description="Ferramentas que simplificam o cumprimento das obrigações fiscais e tributárias."
+          title="Soluções para Órgãos Públicos"
+          description="Automação fiscal pública com precisão, conformidade e transparência."
           icon={Building2}
         />
         <FeatureCard
