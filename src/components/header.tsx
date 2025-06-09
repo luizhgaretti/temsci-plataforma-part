@@ -44,12 +44,7 @@ export function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <img
-            src="/lovable-uploads/dc643f90-d32b-46d9-bb57-89217bd99123.png"
-            alt="TEM.SCI Logo"
-            className="h-12 w-auto md:h-16"
-          />
-          <div className={`ml-4 font-semibold text-lg ${isScrolled ? "text-temsci-black" : "text-white"}`}>
+          <div className={`font-semibold text-lg ${isScrolled ? "text-temsci-black" : "text-white"}`}>
             {companyName}
           </div>
         </div>
@@ -86,12 +81,8 @@ export function Header() {
               opacity-0 group-hover:opacity-20 
               transition-opacity duration-500 ease-in-out">
             </span>
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10">
               Solicitar Demonstração
-              <div className="relative">
-                <span className="absolute -inset-1 bg-temsci-blue rounded-full animate-ping opacity-20"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-temsci-blue"></span>
-              </div>
             </span>
           </Button>
           
