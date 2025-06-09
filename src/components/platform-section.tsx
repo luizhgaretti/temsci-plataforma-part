@@ -1,6 +1,6 @@
-
 import { Section } from "@/components/ui/section";
 import { BenefitItem } from "@/components/benefit-item";
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { GeometricShapes } from "@/components/ui/geometric-shapes";
 
@@ -28,6 +28,15 @@ export function PlatformSection() {
       }
     };
   }, []);
+
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById('solicitar-demo');
+    if (demoSection) {
+      demoSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <Section id="platform-section" className="bg-white py-20 relative overflow-hidden">
@@ -64,18 +73,27 @@ export function PlatformSection() {
             ))}
           </div>
           
-          <div className="space-y-4 text-gray-700">
+          <div className="space-y-4 text-gray-700 mb-8">
             <p className="border-l-4 border-temsci-purple pl-4 italic bg-gray-50 p-3 rounded shadow-sm hover:shadow-md transition-shadow glass-effect backdrop-blur-sm">
               Por outro lado, os prestadores de serviços são obrigados a destacar corretamente nos
               documentos fiscais os tributos a serem retidos pelos tomadores, facilidade também oferecida
               pela Plataforma Web de Análise das Retenções Tributárias – PART.
             </p>
           </div>
+
+          <div className="mt-8">
+            <Button 
+              onClick={scrollToDemo}
+              className="bg-temsci-purple hover:bg-temsci-purple/90 text-white px-8 py-3 text-lg font-semibold"
+              size="lg"
+            >
+              Solicitar Demonstração
+            </Button>
+          </div>
         </div>
         
         <div className={`order-1 md:order-2 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[50px] opacity-0'}`}>
           <div className="relative rounded-lg overflow-hidden shadow-xl bg-white p-6 z-10">
-            {/* Removed glowing background effect that was causing flashing */}
             
             <div className="relative z-10">
               
