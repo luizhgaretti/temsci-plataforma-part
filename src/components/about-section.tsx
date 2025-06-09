@@ -56,8 +56,8 @@ export function AboutSection() {
             Nossas soluções são desenvolvidas em estrita conformidade com a legislação vigente, atendendo com rigor às exigências dos órgãos de controle e fiscalização. Com tecnologia, inovação e sólida experiência, promovemos uma gestão mais eficiente, segura e alinhada aos princípios da legalidade, da responsabilidade fiscal e da geração de valor.
           </p>
           
-          {/* Updated Missão, Visão e Valores section */}
-          <div className={`mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          {/* Updated Missão, Visão e Valores section - Always horizontal */}
+          <div className={`mt-16 grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {[
               { 
                 title: "Missão", 
@@ -77,17 +77,17 @@ export function AboutSection() {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-temsci-purple/20 h-full flex flex-col"
+                className="p-4 md:p-6 lg:p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-temsci-purple/20 h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-temsci-purple/10 to-temsci-blue/10 flex items-center justify-center text-2xl">
+                <div className="flex items-center justify-center mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-temsci-purple/10 to-temsci-blue/10 flex items-center justify-center text-lg md:text-2xl">
                     {item.icon}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-temsci-black text-center">{item.title}</h3>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-4 text-temsci-black text-center">{item.title}</h3>
                 <div className="flex-1 flex items-start">
-                  <p className="text-gray-600 leading-relaxed text-left whitespace-pre-line">{item.description}</p>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed text-left whitespace-pre-line">{item.description}</p>
                 </div>
               </div>
             ))}
