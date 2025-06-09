@@ -1,3 +1,4 @@
+
 import { Section } from "@/components/ui/section";
 import { BenefitItem } from "@/components/benefit-item";
 import { Button } from "@/components/ui/button";
@@ -47,15 +48,35 @@ export function PlatformSection() {
       <div className="grid gap-16 md:grid-cols-2 items-center">
         <div className={`order-2 md:order-1 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'}`}>
           <h2 className="text-3xl font-bold tracking-tight text-temsci-black mb-6 relative">
-            <span className="text-gradient">Plataforma</span> de Retenção Contábil
+            <span className="text-gradient">PART</span> – Plataforma Web de Análise das Retenções Tributárias
             <span className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-temsci-blue to-temsci-purple"></span>
           </h2>
-          <p className="text-gray-700 mb-8 text-lg">
-            Desenvolvida para automatizar e facilitar a aplicação das regras atribuídas aos tomadores de serviços,
+          
+          <p className="text-gray-700 mb-6 text-lg font-medium">
+            Análise automatizada das retenções tributárias para:
+          </p>
+          
+          <div className="space-y-3 mb-6">
+            <BenefitItem 
+              text="Órgãos Públicos que buscam aumentar a arrecadação, reduzir riscos e garantir conformidade legal."
+              className="hover:scale-105 transition-transform duration-300"
+            />
+            <BenefitItem 
+              text="Escritórios de Contabilidade que querem escalar seus atendimentos com precisão."
+              className="hover:scale-105 transition-transform duration-300"
+            />
+            <BenefitItem 
+              text="Empresas que desejam agilidade e segurança no cumprimento das obrigações fiscais."
+              className="hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
+          <p className="text-gray-700 mb-6 text-lg">
+            Desenvolvida para automatizar e simplificar a aplicação das regras legais atribuídas aos 
             responsáveis pelas retenções e recolhimentos dos seguintes tributos:
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          <div className="grid grid-cols-1 gap-3 mb-6">
             {[
               "Imposto de Renda – IR",
               "Contribuição Previdenciária – INSS",
@@ -75,9 +96,8 @@ export function PlatformSection() {
           
           <div className="space-y-4 text-gray-700 mb-8">
             <p className="border-l-4 border-temsci-purple pl-4 italic bg-gray-50 p-3 rounded shadow-sm hover:shadow-md transition-shadow glass-effect backdrop-blur-sm">
-              Por outro lado, os prestadores de serviços são obrigados a destacar corretamente nos
-              documentos fiscais os tributos a serem retidos pelos tomadores, facilidade também oferecida
-              pela Plataforma Web de Análise das Retenções Tributárias – PART.
+              Com a plataforma, tomadores e prestadores de serviços contam com uma ferramenta poderosa 
+              que automatiza, orienta e assegura conformidade no destaque e na retenção dos principais tributos.
             </p>
           </div>
 
