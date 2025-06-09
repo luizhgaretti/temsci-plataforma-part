@@ -1,23 +1,15 @@
 import { Mail, Phone } from "lucide-react";
-
 export function Footer() {
   const companyName = "TEM Soluções contábeis inteligentes";
-
-  return (
-    <footer className="bg-temsci-black text-white">
+  return <footer className="bg-temsci-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="mb-4">
-              <img
-                src="/lovable-uploads/dc643f90-d32b-46d9-bb57-89217bd99123.png"
-                alt={`${companyName} Logo`}
-                className="h-16 w-auto"
-              />
+              <img src="/lovable-uploads/dc643f90-d32b-46d9-bb57-89217bd99123.png" alt={`${companyName} Logo`} className="h-16 w-auto" />
             </div>
-            <p className="text-gray-400 max-w-xs">
-              Soluções tecnológicas de naturezas contábil, fiscal, tributária, financeira e administrativa para empresas e órgãos públicos.
-            </p>
+            <p className="text-gray-400 max-w-xs">Soluções tecnológicas nas áreas contábil, fiscal, tributária, financeira e administrativa, desenvolvidas para atender empresas e órgãos públicos.
+          </p>
           </div>
           
           <div>
@@ -66,6 +58,5 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} {companyName}. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }

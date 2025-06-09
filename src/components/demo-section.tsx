@@ -1,20 +1,13 @@
-
 import { Section } from "@/components/ui/section";
 import { DemoForm } from "@/components/demo-form";
-
 export function DemoSection() {
-  return (
-    <Section id="solicitar-demo" className="bg-gradient-to-br from-temsci-black to-temsci-black/95 text-white">
+  return <Section id="solicitar-demo" className="bg-gradient-to-br from-temsci-black to-temsci-black/95 text-white">
       <div className="grid gap-10 md:grid-cols-2 items-center">
         <div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
             Solicite uma Demonstração
           </h2>
-          <p className="text-gray-300 mb-6">
-            Conheça nossas soluções especializadas para transformar a administração tributária e contábil na sua instituição. 
-            Preencha o formulário abaixo e nossa equipe técnica entrará em contato para agendar uma apresentação personalizada, 
-            focada nas necessidades da gestão pública.
-          </p>
+          <p className="text-gray-300 mb-6">O futuro da gestão tributária começa agora! Agende uma apresentação personalizada com nossa equipe técnica preenchendo o formulário abaixo.</p>
           <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10">
             <DemoForm />
           </div>
@@ -32,21 +25,17 @@ export function DemoSection() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">2</span>
-                  <span>Automação das retenções tributárias</span>
+                  <span>Automação inteligente das retenções tributárias</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">3</span>
                   <span>Relatórios e dashboards personalizados</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-temsci-purple/20 text-temsci-purple">4</span>
-                  <span>Exemplo prático com seus próprios dados</span>
-                </li>
+                
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </Section>
-  );
+    </Section>;
 }
