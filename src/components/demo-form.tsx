@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import emailjs from '@emailjs/browser';
 
 export function DemoForm() {
   const { toast } = useToast();
@@ -22,7 +22,18 @@ export function DemoForm() {
   };
 
   const sendEmail = async (data: typeof formData) => {
-    const emailBody = `
+    // Configuração do EmailJS
+    const serviceId = 'service_demo_form'; // Você precisará configurar isso no EmailJS
+    const templateId = 'template_demo_form'; // Você precisará configurar isso no EmailJS
+    const publicKey = 'YOUR_PUBLIC_KEY'; // Você precisará configurar isso no EmailJS
+
+    const templateParams = {
+      to_email: 'luizh.rosario@gmail.com',
+      from_name: data.name,
+      from_email: data.email,
+      entidade: data.entidade,
+      phone: data.phone,
+      message: `
 Nova solicitação de demonstração:
 
 Nome: ${data.name}
@@ -31,12 +42,15 @@ Entidade: ${data.entidade}
 Telefone: ${data.phone}
 
 Data da solicitação: ${new Date().toLocaleString('pt-BR')}
-    `.trim();
+      `.trim()
+    };
 
-    const mailtoLink = `mailto:luizh.rosario@gmail.com?subject=Nova Solicitação de Demonstração - ${data.name}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Abre o cliente de email padrão
-    window.location.href = mailtoLink;
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      throw error;
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -50,8 +64,8 @@ Data da solicitação: ${new Date().toLocaleString('pt-BR')}
       await sendEmail(formData);
       
       toast({
-        title: "Solicitação recebida!",
-        description: "Entraremos em contato em breve para agendar sua demonstração.",
+        title: "Solicitação enviada com sucesso!",
+        description: "Seu email foi enviado. Entraremos em contato em breve para agendar sua demonstração.",
       });
       
       // Clear form
@@ -64,8 +78,8 @@ Data da solicitação: ${new Date().toLocaleString('pt-BR')}
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
       toast({
-        title: "Erro",
-        description: "Houve um problema ao enviar sua solicitação. Tente novamente.",
+        title: "Erro ao enviar",
+        description: "Houve um problema ao enviar sua solicitação. Tente novamente ou entre em contato diretamente conosco.",
         variant: "destructive",
       });
     } finally {
@@ -75,6 +89,7 @@ Data da solicitação: ${new Date().toLocaleString('pt-BR')}
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      
       <div>
         <Input 
           placeholder="Nome Completo" 
