@@ -1,7 +1,7 @@
 
 import { Section } from "@/components/ui/section";
 import { FeatureCard } from "@/components/feature-card";
-import { Calculator, Building2, FileText, BarChart3 } from "lucide-react";
+import { Calculator } from "lucide-react";
 
 export function ServicesSection() {
   return (
@@ -15,26 +15,11 @@ export function ServicesSection() {
         </p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="flex justify-center">
         <FeatureCard
           title="Plataforma PART"
           description="Análise automatizada das Retenções Tributárias para órgãos e entidades públicas"
           icon={Calculator}
-        />
-        <FeatureCard
-          title="Soluções para Órgãos Públicos"
-          description="Automação fiscal pública com precisão, conformidade e transparência."
-          icon={Building2}
-        />
-        <FeatureCard
-          title="Apoio Contábil Governamental"
-          description="Assessoria técnica para departamentos fiscais e contábeis da administração pública"
-          icon={FileText}
-        />
-        <FeatureCard
-          title="Gestão Tributária"
-          description="Gestão eficaz dos impostos retidos e recolhidos pela administração pública"
-          icon={BarChart3}
         />
       </div>
     </Section>
