@@ -22,7 +22,7 @@ export function FeedbackSection() {
     id: 1,
     name: "Carlos Silva",
     role: "Contador Sênior",
-    company: "ContaFácil Ltda",
+    company: "",
     content: "A plataforma TEM.SCI revolucionou nossa forma de trabalhar com as retenções tributárias. Reduziu o tempo de processamento em 70% e praticamente eliminou os erros nas declarações.",
     rating: 5,
     featured: true
@@ -30,28 +30,28 @@ export function FeedbackSection() {
     id: 2,
     name: "Ana Oliveira",
     role: "Diretora Financeira",
-    company: "Grupo Contábil Nacional",
+    company: "",
     content: "Estamos utilizando a plataforma há 8 meses e os resultados são impressionantes. A automação dos processos de retenção tributária nos permite focar no que realmente importa: o atendimento consultivo aos nossos clientes.",
     rating: 5
   }, {
     id: 3,
     name: "Roberto Mendes",
     role: "Contador",
-    company: "RM Associados",
+    company: "",
     content: "A integração com nossos sistemas existentes foi muito mais simples do que esperávamos. O suporte técnico da TEM.SCI é excepcional, sempre disponível para resolver qualquer questão.",
     rating: 4
   }, {
     id: 4,
     name: "Juliana Costa",
     role: "Contadora Tributária",
-    company: "JC Contabilidade",
+    company: "",
     content: "Conseguimos aumentar nossa carteira de clientes em 30% sem precisar contratar mais profissionais, graças à eficiência que a plataforma trouxe para nossos processos de retenções.",
     rating: 5
   }, {
     id: 5,
     name: "Marcos Almeida",
     role: "Diretor de Operações",
-    company: "Contabilidade Digital SA",
+    company: "",
     content: "A dashboards de visualização são intuitivos e nos ajudam a ter uma visão clara de todos os processos. A plataforma se tornou essencial para nosso escritório.",
     rating: 4
   }];
@@ -104,7 +104,7 @@ export function FeedbackSection() {
       <div className="text-center mb-16 relative z-10">
         
         <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-          O que dizem os <span className="relative">contadores
+          O que dizem nossos <span className="relative">clientes
             <span className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-temsci-purple to-temsci-blue opacity-70"></span>
           </span>
         </h2>
