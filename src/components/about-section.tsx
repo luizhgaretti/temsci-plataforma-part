@@ -56,23 +56,39 @@ export function AboutSection() {
             Nossas soluções são desenvolvidas em estrita conformidade com a legislação vigente, atendendo com rigor às exigências dos órgãos de controle e fiscalização. Com tecnologia, inovação e sólida experiência, promovemos uma gestão mais eficiente, segura e alinhada aos princípios da legalidade, da responsabilidade fiscal e da geração de valor.
           </p>
           
-          {/* New animated section */}
-          <div className={`mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          {/* Updated Missão, Visão e Valores section */}
+          <div className={`mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {[
-              { title: "Missão", description: "Plataforma única que automatiza e valida informações fiscais e retenções tributárias com precisão." },
-              { title: "Visão", description: "Validamos automaticamente todas as informações fiscais, garantindo conformidade tributária com segurança e confiabilidade." },
-              { title: "Valores", description: "Redução de custos, tempo e riscos fiscais com processos inteligentes de retenção tributária" }
+              { 
+                title: "Missão", 
+                description: "Desenvolver soluções tecnológicas inovadoras e acessíveis que simplifiquem e otimizem os processos contábeis, fiscais, tributários e administrativos de empresas e órgãos públicos, promovendo eficiência, conformidade e gestão inteligente.",
+                icon: "🎯"
+              },
+              { 
+                title: "Visão", 
+                description: "Ser referência nacional em tecnologia aplicada à gestão empresarial e pública, reconhecida pela excelência, confiabilidade e capacidade de transformar rotinas manuais em processos automatizados, promovendo eficiência e inovação nas instituições.",
+                icon: "🔮"
+              },
+              { 
+                title: "Valores", 
+                description: "• Inovação com Propósito – Construímos soluções tecnológicas focadas em resultados práticos.\n• Eficiência – Priorizamos agilidade, economia de tempo e apoio à decisão.\n• Conformidade – Atuamos com rigor legal.\n• Ética e Transparência – Valorizamos a integridade em todas as relações.\n• Parceria Duradoura – Construímos relações sólidas baseadas em confiança mútua.",
+                icon: "⭐"
+              }
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                className="p-8 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-temsci-purple/20 h-full flex flex-col"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-temsci-purple/10 to-temsci-blue/10 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-temsci-purple to-temsci-blue"></div>
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-temsci-purple/10 to-temsci-blue/10 flex items-center justify-center text-2xl">
+                    {item.icon}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-temsci-black">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <h3 className="text-2xl font-bold mb-4 text-temsci-black text-center">{item.title}</h3>
+                <div className="flex-1 flex items-start">
+                  <p className="text-gray-600 leading-relaxed text-left whitespace-pre-line">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
