@@ -59,9 +59,9 @@ export function AboutSection() {
           {/* New animated section */}
           <div className={`mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {[
-              { title: "Inovação", description: "Plataforma única que automatiza e valida informações fiscais e retenções tributárias com precisão." },
-              { title: "Segurança", description: "Validamos automaticamente todas as informações fiscais, garantindo conformidade tributária com segurança e confiabilidade." },
-              { title: "Economia", description: "Redução de custos, tempo e riscos fiscais com processos inteligentes de retenção tributária" }
+              { title: "Missão", description: "Plataforma única que automatiza e valida informações fiscais e retenções tributárias com precisão." },
+              { title: "Visão", description: "Validamos automaticamente todas as informações fiscais, garantindo conformidade tributária com segurança e confiabilidade." },
+              { title: "Valores", description: "Redução de custos, tempo e riscos fiscais com processos inteligentes de retenção tributária" }
             ].map((item, index) => (
               <div 
                 key={index} 
