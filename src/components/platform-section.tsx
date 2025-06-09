@@ -1,35 +1,28 @@
-
 import { Section } from "@/components/ui/section";
 import { BenefitItem } from "@/components/benefit-item";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { GeometricShapes } from "@/components/ui/geometric-shapes";
-
 export function PlatformSection() {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        setIsVisible(true);
+      }
+    }, {
+      threshold: 0.2
+    });
     const element = document.getElementById('platform-section');
     if (element) {
       observer.observe(element);
     }
-
     return () => {
       if (element) {
         observer.unobserve(element);
       }
     };
   }, []);
-
   const scrollToDemo = () => {
     const demoSection = document.getElementById('solicitar-demo');
     if (demoSection) {
@@ -38,9 +31,7 @@ export function PlatformSection() {
       });
     }
   };
-
-  return (
-    <Section id="platform-section" className="bg-white py-20 relative overflow-hidden">
+  return <Section id="platform-section" className="bg-white py-20 relative overflow-hidden">
       {/* Subtle background shapes */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-temsci-purple/5 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-temsci-blue/5 rounded-full filter blur-3xl"></div>
@@ -57,18 +48,9 @@ export function PlatformSection() {
           </p>
           
           <div className="space-y-3 mb-6">
-            <BenefitItem 
-              text="Órgãos Públicos que buscam aumentar a arrecadação, reduzir riscos e garantir conformidade legal."
-              className="hover:scale-105 transition-transform duration-300"
-            />
-            <BenefitItem 
-              text="Escritórios de Contabilidade que querem escalar seus atendimentos com precisão."
-              className="hover:scale-105 transition-transform duration-300"
-            />
-            <BenefitItem 
-              text="Empresas que desejam agilidade e segurança no cumprimento das obrigações fiscais."
-              className="hover:scale-105 transition-transform duration-300"
-            />
+            <BenefitItem text="Órgãos Públicos que buscam aumentar a arrecadação, reduzir riscos e garantir conformidade legal." className="hover:scale-105 transition-transform duration-300" />
+            <BenefitItem text="Escritórios de Contabilidade que querem escalar seus atendimentos com precisão." className="hover:scale-105 transition-transform duration-300" />
+            <BenefitItem text="Empresas que desejam agilidade e segurança no cumprimento das obrigações fiscais." className="hover:scale-105 transition-transform duration-300" />
           </div>
           
           <p className="text-gray-700 mb-6 text-lg">
@@ -77,21 +59,10 @@ export function PlatformSection() {
           </p>
           
           <div className="grid grid-cols-1 gap-3 mb-6">
-            {[
-              "Imposto de Renda – IR",
-              "Contribuição Previdenciária – INSS",
-              "Imposto s/ Serviços de Qualquer Natureza – ISSQN"
-            ].map((text, index) => (
-              <BenefitItem 
-                key={index} 
-                text={text} 
-                className="hover:scale-105 transition-transform duration-300 opacity-0 animate-fade-in"
-                style={{ 
-                  animationDelay: `${index * 0.15}s`, 
-                  animationFillMode: 'forwards' 
-                }}
-              />
-            ))}
+            {["Imposto de Renda – IR", "Contribuição Previdenciária – INSS", "Imposto s/ Serviços de Qualquer Natureza – ISSQN"].map((text, index) => <BenefitItem key={index} text={text} className="hover:scale-105 transition-transform duration-300 opacity-0 animate-fade-in" style={{
+            animationDelay: `${index * 0.15}s`,
+            animationFillMode: 'forwards'
+          }} />)}
           </div>
           
           <div className="space-y-4 text-gray-700 mb-8">
@@ -102,11 +73,7 @@ export function PlatformSection() {
           </div>
 
           <div className="mt-8">
-            <Button 
-              onClick={scrollToDemo}
-              className="bg-temsci-purple hover:bg-temsci-purple/90 text-white px-8 py-3 text-lg font-semibold"
-              size="lg"
-            >
+            <Button onClick={scrollToDemo} className="bg-temsci-purple hover:bg-temsci-purple/90 text-white px-8 py-3 text-lg font-semibold" size="lg">
               Solicitar Demonstração
             </Button>
           </div>
@@ -124,24 +91,18 @@ export function PlatformSection() {
               
               <div className="space-y-4">
                 <div className="p-4 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-md transition-all">
-                  <h4 className="font-medium text-temsci-purple">Automatização completa</h4>
-                  <p className="text-gray-600">
-                    Minimize erros humanos e garanta conformidade com as normas fiscais através da nossa plataforma inteligente.
-                  </p>
+                  <h4 className="font-medium text-temsci-purple">Inovação</h4>
+                  <p className="text-gray-600 text-justify">Plataforma exclusiva que valida automaticamente informações fiscais com alta precisão, simplificando a complexidade das retenções tributárias.</p>
                 </div>
                 
                 <div className="p-4 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-md transition-all">
-                  <h4 className="font-medium text-temsci-blue">Economia de Tempo</h4>
-                  <p className="text-gray-600">
-                    Reduza o tempo com processos manuais e concentre-se no que é essencial para sua instituição pública.
-                  </p>
+                  <h4 className="font-medium text-temsci-blue">Segurança</h4>
+                  <p className="text-gray-600 text-justify">Validação automática das retenções, assegurando conformidade legal e total confiabilidade nos processos de retenções. Minimize erros humanos e garanta conformidade com as regras tributárias.</p>
                 </div>
                 
                 <div className="p-4 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-md transition-all">
-                  <h4 className="font-medium text-temsci-purple">Suporte especializado</h4>
-                  <p className="text-gray-600">
-                    Nossa equipe de especialistas em tributação está sempre disponível para ajudar com suas dúvidas.
-                  </p>
+                  <h4 className="font-medium text-temsci-purple">Economia</h4>
+                  <p className="text-gray-600 text-justify">Otimização de tempo, redução de custos e de riscos fiscais com processos automáticos e eficientes de apuração tributária. Invista no que é essencial para o seu negócio, reduza custos e riscos com atividades burocráticas.</p>
                 </div>
               </div>
             </div>
@@ -159,6 +120,5 @@ export function PlatformSection() {
           </div>
         </div>
       </div>
-    </Section>
-  );
+    </Section>;
 }
