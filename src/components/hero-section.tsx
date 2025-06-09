@@ -35,9 +35,7 @@ export function HeroSection() {
               <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
                 <span className="text-gradient">Soluções Contábeis</span> Inteligentes
               </h1>
-              <p className="text-xl text-gray-300 md:text-2xl">
-                Transformando a gestão tributária no setor público com tecnologia de ponta.
-              </p>
+              <p className="text-xl text-gray-300 md:text-2xl">Automatizamos processos, entregamos soluções</p>
             </div>
             
             <div className={`flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
