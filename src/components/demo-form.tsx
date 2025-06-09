@@ -12,6 +12,7 @@ export function DemoForm() {
     entidade: "",
     phone: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -20,23 +21,56 @@ export function DemoForm() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = async (data: typeof formData) => {
+    const emailBody = `
+Nova solicitação de demonstração:
+
+Nome: ${data.name}
+Email: ${data.email}
+Entidade: ${data.entidade}
+Telefone: ${data.phone}
+
+Data da solicitação: ${new Date().toLocaleString('pt-BR')}
+    `.trim();
+
+    const mailtoLink = `mailto:luizh.rosario@gmail.com?subject=Nova Solicitação de Demonstração - ${data.name}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Abre o cliente de email padrão
+    window.location.href = mailtoLink;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send this data to your backend
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
     
-    toast({
-      title: "Solicitação recebida!",
-      description: "Entraremos em contato em breve para agendar sua demonstração.",
-    });
-    
-    // Clear form
-    setFormData({
-      name: "",
-      email: "",
-      entidade: "",
-      phone: "",
-    });
+    try {
+      console.log("Form submitted:", formData);
+      
+      // Envia o email
+      await sendEmail(formData);
+      
+      toast({
+        title: "Solicitação recebida!",
+        description: "Entraremos em contato em breve para agendar sua demonstração.",
+      });
+      
+      // Clear form
+      setFormData({
+        name: "",
+        email: "",
+        entidade: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      toast({
+        title: "Erro",
+        description: "Houve um problema ao enviar sua solicitação. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,6 +83,7 @@ export function DemoForm() {
           onChange={handleChange} 
           required 
           className="border-black focus:border-black text-black"
+          disabled={isSubmitting}
         />
       </div>
       <div>
@@ -60,6 +95,7 @@ export function DemoForm() {
           onChange={handleChange} 
           required 
           className="border-black focus:border-black text-black"
+          disabled={isSubmitting}
         />
       </div>
       <div>
@@ -70,6 +106,7 @@ export function DemoForm() {
           onChange={handleChange} 
           required 
           className="border-black focus:border-black text-black"
+          disabled={isSubmitting}
         />
       </div>
       <div>
@@ -80,10 +117,15 @@ export function DemoForm() {
           onChange={handleChange} 
           required 
           className="border-black focus:border-black text-black"
+          disabled={isSubmitting}
         />
       </div>
-      <Button type="submit" className="w-full bg-temsci-purple hover:bg-temsci-purple/90 text-white">
-        Solicitar Demonstração
+      <Button 
+        type="submit" 
+        className="w-full bg-temsci-purple hover:bg-temsci-purple/90 text-white"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Enviando..." : "Solicitar Demonstração"}
       </Button>
     </form>
   );
