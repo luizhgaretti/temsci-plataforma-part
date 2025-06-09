@@ -12,7 +12,7 @@ export function Header() {
   const companyName = "TEM Soluções contábeis inteligentes";
 
   const navItems = [
-    { name: "Sobre", href: "#sobre" },
+    { name: "Quem Somos", href: "#sobre" },
     { name: "Serviços", href: "#servicos" },
     { name: "Contato", href: "#contato" },
   ];
@@ -91,13 +91,13 @@ export function Header() {
             variant="outline"
             className={`flex items-center gap-2 ${
               isScrolled 
-                ? "border-temsci-purple text-temsci-black hover:bg-temsci-purple/10" 
-                : "border-white text-temsci-black hover:bg-white/10"
+                ? "border-temsci-purple text-black hover:bg-temsci-purple/10" 
+                : "border-white text-black hover:bg-white/10"
             }`}
           >
             <a href="https://temcontabil-tawny.vercel.app/" target="_blank" rel="noopener noreferrer">
               <LogIn className="w-4 h-4" />
-              Área de Membro
+              Área do Cliente
             </a>
           </Button>
         </nav>
@@ -144,11 +144,11 @@ export function Header() {
               <Button
                 asChild
                 variant="outline"
-                className="w-full border-temsci-purple text-temsci-black hover:bg-temsci-purple/10"
+                className="w-full border-temsci-purple text-black hover:bg-temsci-purple/10"
               >
                 <a href="https://temcontabil-tawny.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                   <LogIn className="w-4 h-4" />
-                  Área de Membro
+                  Área do Cliente
                 </a>
               </Button>
             </nav>

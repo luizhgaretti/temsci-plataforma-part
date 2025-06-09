@@ -42,16 +42,18 @@ export function AboutSection() {
       <div className="mx-auto max-w-4xl text-center relative z-10">
         <div className={`inline-block mb-6 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="text-3xl font-bold tracking-tight text-temsci-black md:text-4xl relative inline-block">
-            Quem é a <span className="text-gradient">TEM</span> Soluções contábeis inteligentes?
+            <span className="text-gradient">Quem somos</span>
             <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-temsci-purple to-temsci-blue"></div>
           </h2>
         </div>
         
         <div className={`mt-12 space-y-6 text-lg text-gray-700 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <p className="leading-relaxed">
-            A TEM Soluções Contábeis Inteligentes é uma empresa especializada no desenvolvimento e fornecimento de 
-            <span className="text-temsci-purple font-semibold"> soluções tecnológicas </span>
-            voltadas à modernização e à eficiência da gestão contábil, fiscal, tributária, financeira e administrativa de órgãos públicos, como prefeituras, câmaras municipais, autarquias e demais entidades da administração pública. Todas as soluções são desenvolvidas em conformidade com a legislação vigente, atendendo às exigências da Receita Federal, do INSS e dos demais órgãos de controle.
+            A TEM SCI – Soluções Contábeis Inteligentes é uma empresa especializada no desenvolvimento de soluções tecnológicas voltadas à modernização da gestão empresarial e pública. Atuamos com foco na conformidade contábil, fiscal, tributária, financeira e administrativa, oferecendo ferramentas inteligentes para empresas e órgãos públicos.
+          </p>
+          
+          <p className="leading-relaxed">
+            Nossas soluções são desenvolvidas em estrita conformidade com a legislação vigente, atendendo com rigor às exigências dos órgãos de controle e fiscalização. Com tecnologia, inovação e sólida experiência, promovemos uma gestão mais eficiente, segura e alinhada aos princípios da legalidade, da responsabilidade fiscal e da geração de valor.
           </p>
           
           {/* New animated section */}
