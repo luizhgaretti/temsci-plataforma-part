@@ -115,7 +115,7 @@ Data da solicitação: ${new Date().toLocaleString('pt-BR')}
       </div>
       <div>
         <Input 
-          placeholder="Entidade" 
+          placeholder="Entidade / Empresa" 
           name="entidade" 
           value={formData.entidade} 
           onChange={handleChange} 
