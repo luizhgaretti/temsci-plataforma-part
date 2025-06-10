@@ -1,13 +1,18 @@
+
 import { Section } from "@/components/ui/section";
 import { DemoForm } from "@/components/demo-form";
+
 export function DemoSection() {
   return <Section id="solicitar-demo" className="bg-gradient-to-br from-temsci-black to-temsci-black/95 text-white">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
+          Solicite uma Demonstração
+        </h2>
+        <p className="text-gray-300 mb-6 text-base max-w-2xl mx-auto">O futuro da gestão tributária começa agora! Agende uma apresentação personalizada com nossa equipe técnica preenchendo o formulário abaixo.</p>
+      </div>
+      
       <div className="grid gap-10 md:grid-cols-2 items-center">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
-            Solicite uma Demonstração
-          </h2>
-          <p className="text-gray-300 mb-6 text-base">O futuro da gestão tributária começa agora! Agende uma apresentação personalizada com nossa equipe técnica preenchendo o formulário abaixo.</p>
           <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10">
             <DemoForm />
           </div>
