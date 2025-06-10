@@ -16,13 +16,13 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#sobre" className="text-gray-400 hover:text-white transition-colors">Sobre Nós</a>
+                <a href="#sobre" className="text-gray-400 hover:text-white transition-colors">Quem Somos</a>
               </li>
               <li>
-                <a href="#servicos" className="text-gray-400 hover:text-white transition-colors">Nossos Serviços</a>
+                <a href="#servicos" className="text-gray-400 hover:text-white transition-colors">Serviços</a>
               </li>
               <li>
-                <a href="#solicitar-demo" className="text-gray-400 hover:text-white transition-colors">Solicitar Demo</a>
+                <a href="#solicitar-demo" className="text-gray-400 hover:text-white transition-colors">Solicitar Demonstração</a>
               </li>
               <li>
                 <a href="#contato" className="text-gray-400 hover:text-white transition-colors">Contato</a>

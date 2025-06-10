@@ -7,7 +7,7 @@ export function DemoSection() {
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">
             Solicite uma Demonstração
           </h2>
-          <p className="text-gray-300 mb-6">O futuro da gestão tributária começa agora! Agende uma apresentação personalizada com nossa equipe técnica preenchendo o formulário abaixo.</p>
+          <p className="text-gray-300 mb-6 text-base">O futuro da gestão tributária começa agora! Agende uma apresentação personalizada com nossa equipe técnica preenchendo o formulário abaixo.</p>
           <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10">
             <DemoForm />
           </div>
